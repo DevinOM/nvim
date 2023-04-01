@@ -1,4 +1,4 @@
-# DevinOM NVim Configs
+# DevinOM's neovim configs
 
 ## Prerequisites
 - Homebrew
