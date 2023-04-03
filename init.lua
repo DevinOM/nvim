@@ -1,1 +1,7 @@
-require("theprimeagen")
+require("devinom.plugins-setup")
+require("devinom.core.options")
+require("devinom.core.keymaps")
+require("devinom.core.colorscheme")
+require("devinom.plugins.comment")
+require("devinom.plugins.nvim-tree")
+require("devinom.plugins.lualine")
