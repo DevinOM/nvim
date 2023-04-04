@@ -19,6 +19,11 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
+-- scrolling
+opt.scrolloff = 8
+opt.signcolumn = "yes"
+opt.isfname:append("@-@")
+
 -- appearance
 opt.termguicolors = true
 opt.background = "dark"

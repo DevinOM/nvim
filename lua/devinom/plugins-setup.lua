@@ -25,7 +25,12 @@ end
 return packer.startup(function(use)
 
   use("wbthomason/packer.nvim")
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+
+  -- color schemes
+  use("bluz71/vim-nightfly-guicolors") 
+  use({"rose-pine/neovim", as='rose-pine',config=function() vim.cmd('colorscheme rose-pine') end}) -- preferred color scheme
+  -- use("catppuccin/nvim")
+  -- use("rebelot/kanagawa")
   
   -- lua functions that many plugins use
   use("nvim-lua/plenary.nvim")
@@ -52,6 +57,30 @@ return packer.startup(function(use)
 
   -- statusline
   use("nvim-lualine/lualine.nvim")
+
+  -- fuzzy finding
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+
+  -- autocompletion
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-buffer")
+  use("hrsh7th/cmp-path")
+
+  -- snippets
+  use("L3MON4D3/LuaSnip")
+  use("saadparwaiz1/cmp_luasnip")
+  use("rafamadriz/friendly-snippets")
+
+  -- managing &b installing lsp servers
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+  
+  -- configuring lsp servers
+  use("neovim/nvim-lspconfig")
+  use("hrsh7th/cmp-nvim-lsp")
+  use({ "glepnir/lspsaga.nvim", branch = "main" })
+  use("onsails/lspkind.nvim")
 
   if packer_bootstrap then
     require("packer").sync()
