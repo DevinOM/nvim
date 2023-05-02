@@ -1,6 +1,8 @@
-local opt = vim.opt -- for conciseness
+-- for conciseness
+local opt = vim.opt
 
-vim.opt.guicursor = "" -- fat cursor
+-- fat cursor
+vim.opt.guicursor = ""
 
 -- line numbers
 opt.relativenumber = true
@@ -28,6 +30,7 @@ opt.isfname:append("@-@")
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+
 -- backspace
 opt.backspace = "indent,eol,start"
 

@@ -26,7 +26,6 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- color schemes
-	use("bluz71/vim-nightfly-guicolors")
 	use({
 		"rose-pine/neovim",
 		as = "rose-pine",
@@ -34,11 +33,12 @@ return packer.startup(function(use)
 			vim.cmd("colorscheme rose-pine")
 		end,
 	}) -- preferred color scheme
-	-- use("catppuccin/nvim")
-	-- use("rebelot/kanagawa")
 
 	-- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
+
+	-- github copilot
+	use("github/copilot.vim")
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
